@@ -1,7 +1,7 @@
 <template lang="pug">
 	header.header-wrapper
 		.logo
-			i.fa.fa-book
+			i.fa.fa-sun
 			nuxt-link(to='/') JangYongUn
 		ul.navi-wrapper
 			li.navi
