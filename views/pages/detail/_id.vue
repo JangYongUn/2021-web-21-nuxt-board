@@ -1,6 +1,6 @@
 <template lang="pug">
 	.view-wrapper
-		v-card.card-wrapper(color="white" elevation="2")
+		v-card.card-wrapper(color="white" elevation="2" :loading="loading")
 			v-card-title {{list.title}}
 			v-divider
 			v-card-subtitle.my-4.card-subtitle
