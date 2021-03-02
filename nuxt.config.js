@@ -9,8 +9,8 @@ export default {
 	},
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - 21.vue-nuxt-board',
-    title: '21.vue-nuxt-board 활용한 게시판',
+    titleTemplate: '%s - Vue/Nuxt를 활용한 게시판',
+    title: 'Vue/Nuxt를 활용한 게시판',
     htmlAttrs: {
       lang: 'ko'
     },
