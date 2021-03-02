@@ -1,6 +1,6 @@
 <template lang="pug">
 	.view-wrapper
-		v-card.card-wrapper(color="white" elevation="2" :loading="loading")
+		v-card.card-wrapper(color="white" elevation="2")
 			v-card-title {{list.title}}
 			v-divider
 			v-card-subtitle.my-4.card-subtitle
@@ -37,13 +37,11 @@ export default {
 	layout: 'layout-default',
 	async asyncData({ params }) {
 		let { data } = await axios.get(`http://127.0.0.1:3000/api/view/${ params.id }`)
-		let list = data[0]
+		let list = data
 		list.wdate = moment(list.created).format('YYYY-MM-DD HH:mm:ss');
-		console.log(list.savefile)
 		if(list.savefile) {
 			list.file = filePath(list.savefile)
 			list.isImg = isImage(list.savefile)
-			console.log(list.file);
 		}
 		return { list }
 	},
@@ -59,7 +57,7 @@ export default {
 	.view-wrapper {
 		padding-bottom: 4em;
 		.card-wrapper {
-    	padding: 2em 1em;
+			padding: 2em 1em;
 			.card-subtitle {
 				span {
 					&:first-child {
