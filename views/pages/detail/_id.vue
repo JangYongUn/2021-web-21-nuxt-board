@@ -1,6 +1,6 @@
 <template lang="pug">
 	.view-wrapper
-		v-card.card-wrapper(color="white" elevation="2")
+		v-card.card-wrapper(color="white" elevation="5")
 			v-card-title {{list.title}}
 			v-divider
 			v-card-subtitle.my-4.card-subtitle
@@ -41,6 +41,7 @@ export default {
 		list.wdate = moment(list.created).format('YYYY-MM-DD HH:mm:ss');
 		if(list.savefile) {
 			list.file = filePath(list.savefile)
+			console.log(list.file);
 			list.isImg = isImage(list.savefile)
 		}
 		return { list }
